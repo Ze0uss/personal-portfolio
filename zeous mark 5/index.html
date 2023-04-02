@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel=" icon" type="image/icon" href="/image/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <title>saurabh kr.- Home page </title>
+</head>
+
+<body>
+    <section class="home">
+
+        <div class="home-left">
+            <h2 class="icon">Sk.</h2>
+            <div class="intro">
+                <h4>INTRO</h4>
+                <P> Hi, I'm Saurabh, a <span class="auto-type"></span></P>
+                <h2 class="bio"> Front end Developer , Data science / Data analytics</h2>
+                <button class="btn"> <a href="/about.html"><i class='fas fa-angle-double-right'
+                            style='font-size:15px'></i>
+                        About me</a></button>
+            </div>
+
+            <div class="social">
+                <h4>ELSEWHERE</h4>
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/saurabh-k-452b38241" target="_blank"> <i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Ze0uss " target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://youtube.com/@saurabhkIn" target="_blank"><i
+                            class="fa-brands fa-square-youtube"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="home-right">
+            <img src="/image/home.jpg" id="slider">
+
+            <div class="menu-right">
+            </div>
+            <div class="menu-bar">
+                <h6>My Work</h6>
+
+                <nav class="menu">
+                    <ul>
+                        <li class="item-home"><a href="/index.html" onmouseenter="changeImage('/image/bg.jpg')">
+                                <strong>Home</strong> </a> </li>
+                        <li class="item-about"><a href="/about.html" onmouseenter="changeImage('/image/about.jpg')">
+                                <strong>About</strong> </a> </li>
+                        <li class="item-gallery"><a href="/gallery.html"
+                                onmouseenter="changeImage('/image/gallery.jpg')"><strong>Gallery</strong> </a> </li>
+                        <li class="item-project"><a href="/project.html"
+                                onmouseenter="changeImage('/image/project.jpg')">
+                                <strong>Projets</strong> </a> </li>
+                        <li class="item-contact"><a href="/contact.html"
+                                onmouseenter="changeImage('/image/contact.jpg')">
+                                <strong>Contact me</strong> </a> </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <i class="fa-sharp fa-solid fa-bars" id="menuIcon"></i>
+    <div class="menu-box" id="menuBox">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/project.html">Project</a></li>
+            <li><a href="/contact.html">Contact us</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+
+    <script>
+
+        // this function is known as change the background image
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+
+        //  this functionis for manu box
+
+        let menuBox = document.getElementById("menuBox");
+        let menuIcon = document.getElementById("menuIcon");
+
+        menuIcon.onclick = function () {
+            menuBox.classList.toggle("open-menu");
+        }
+
+        // this function is for changing the name of var
+
+        var options = {
+            strings: ["Coder",
+                "Developer",
+                "programmer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            backDelay: 1500,
+            loop: true
+        };
+
+        var typed = new Typed('.auto-type', options);
+    </script>
+</body>
+
+</html>
